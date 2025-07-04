@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Simulado CNU - Geração IA</title>
+</head>
+<body>
+    <h1>Gerador de Simulados por IA</h1>
+    <form action="{{ url_for('gerar_simulado') }}" method="post">
+        <label for="id_vaga">1. Selecione a Vaga:</label><br>
+        <select name="id_vaga" id="id_vaga" required>
+            {% for vaga in vagas %}
+                <option value="{{ vaga.id }}">{{ vaga.titulo }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="banca">2. Selecione a Banca Examinadora:</label><br>
+        <select name="banca" id="banca" required>
+            {% for banca in bancas %}
+                <option value="{{ banca }}">{{ banca }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <button type="submit">Gerar Simulado com IA!</button>
+    </form>
+</body>
+</html>

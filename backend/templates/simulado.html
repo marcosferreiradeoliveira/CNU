@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulado para {{ vaga.titulo }}</title>
+</head>
+<body>
+    <h1>Simulado: {{ vaga.titulo }}</h1>
+    <form action="{{ url_for('resultado') }}" method="post">
+        <input type="hidden" name="id_vaga" value="{{ vaga.id }}">
+        {% for questao in questoes %}
+            <div>
+                <h3>Questão {{ loop.index }}: ({{ questao.disciplina }})</h3>
+                <p>{{ questao.enunciado }}</p>
+                {% for alt in questao.alternativas %}
+                    <input type="radio" name="q-{{ questao.id }}" value="{{ alt }}" id="q{{ questao.id }}-{{ loop.index }}">
+                    <label for="q{{ questao.id }}-{{ loop.index }}">{{ alt }}</label><br>
+                {% endfor %}
+            </div>
+            <hr>
+        {% endfor %}
+        <button type="submit">Finalizar e Corrigir Simulado</button>
+    </form>
+</body>
+</html>

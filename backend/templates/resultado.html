@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seu Resultado</title>
+    <style>
+    .correta { color: green; }
+    .incorreta { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Resultado do Simulado</h1>
+    <h2>Você acertou {{ acertos }} de {{ total }} questões.</h2>
+
+    {% if caminho_podcast %}
+        <h3>🎧 Seu Podcast de Resumo dos Erros</h3>
+        <p>Ouça um resumo personalizado explicando os conceitos que você errou. Ideal para estudar em qualquer lugar!</p>
+        <audio controls src="{{ url_for('static', filename=caminho_podcast) }}">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    {% else %}
+        <p>Não foi possível gerar seu podcast. Se você não errou nenhuma questão, parabéns!</p>
+    {% endif %}
+
+    <hr>
+    <h2>Correção Detalhada</h2>
+    {% for item in detalhes %}
+        <div>
+            <h4>Questão: {{ item.enunciado }}</h4>
+            <p>Sua resposta: {{ item.resposta_usuario or "Não respondida" }}</p>
+            <p>Resposta correta: {{ item.resposta_correta }}</p>
+            <p class="{% if item.correta %}correta{% else %}incorreta{% endif %}">
+                {% if item.correta %}
+                    <strong>Você acertou!</strong>
+                {% else %}
+                    <strong>Você errou.</strong>
+                {% endif %}
+            </p>
+            <p><em>Explicação: {{ item.explicacao }}</em></p>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>

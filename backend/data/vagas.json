@@ -1,0 +1,12 @@
+[
+    {
+        "id": "bloco-8-nivel-intermediario",
+        "titulo": "Bloco 8 - Nível Intermediário",
+        "disciplinas": ["Língua Portuguesa", "Noções de Direito", "Matemática", "Realidade Brasileira"]
+    },
+    {
+        "id": "bloco-7-gestao-governamental",
+        "titulo": "Bloco 7 - Gestão Governamental e Administração Pública",
+        "disciplinas": ["Políticas Públicas", "Administração Pública", "Finanças Públicas"]
+    }
+]

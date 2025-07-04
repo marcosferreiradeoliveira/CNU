@@ -1,0 +1,32 @@
+{
+    "FGV": {
+        "nome": "Fundação Getúlio Vargas (FGV)",
+        "instrucoes": [
+            "Crie questões que exijam interpretação de texto e raciocínio lógico, evitando perguntas de simples memorização.",
+            "Utilize enunciados baseados em cenários práticos, estudos de caso ou pequenos textos (jornalísticos, legais ou acadêmicos).",
+            "Elabore 5 alternativas (A, B, C, D, E).",
+            "As alternativas incorretas (distratores) devem ser plausíveis e relacionadas ao tema, explorando erros comuns de interpretação.",
+            "A explicação da resposta correta deve ser detalhada, justificando por que ela é a certa e por que as outras estão erradas."
+        ],
+        "exemplos": [
+            {
+                "disciplina": "Língua Portuguesa",
+                "questao": {
+                    "enunciado": "Leia o fragmento a seguir: 'A despeito das inúmeras críticas, o diretor levou a cabo o projeto.' A locução 'a despeito de' pode ser substituída, sem alteração de sentido, por:",
+                    "alternativas": ["A) por causa de", "B) apesar de", "C) a fim de", "D) em vez de", "E) através de"],
+                    "resposta_correta": "B) apesar de",
+                    "explicacao": "A locução 'a despeito de' tem valor concessivo, indicando uma oposição ou um obstáculo que não impede a ação principal. 'Apesar de' é o sinônimo perfeito para essa ideia de concessão."
+                }
+            },
+            {
+                "disciplina": "Noções de Direito Administrativo",
+                "questao": {
+                    "enunciado": "Um servidor público, agindo com a intenção de prejudicar um cidadão, atrasa injustificadamente a análise de um pedido de licença. Segundo a Lei nº 8.429/92 (Lei de Improbidade Administrativa), essa conduta caracteriza, em tese, um ato de improbidade que atenta contra qual princípio da administração pública?",
+                    "alternativas": ["A) Princípio da Eficiência", "B) Princípio da Publicidade", "C) Princípio da Legalidade", "D) Princípio da Moralidade", "E) Princípio da Impessoalidade"],
+                    "resposta_correta": "D) Princípio da Moralidade",
+                    "explicacao": "Atrasar um ato de ofício com finalidade pessoal (prejudicar outrem) viola o dever de honestidade e lealdade à instituição, o que se enquadra na violação ao Princípio da Moralidade Administrativa. Embora possa tangenciar outros princípios, a intenção (dolo) de prejudicar é o cerne da imoralidade."
+                }
+            }
+        ]
+    }
+}
