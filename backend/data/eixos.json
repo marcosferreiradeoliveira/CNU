@@ -1,0 +1,53 @@
+[
+    {
+      "id": "eixo-1",
+      "nome": "Gestão Governamental e Governança Pública",
+      "topicos": [
+        "Planejamento e gestão estratégica",
+        "Organização e estrutura do Estado",
+        "Gestão de pessoas no setor público",
+        "Processos e projetos"
+      ]
+    },
+    {
+      "id": "eixo-2",
+      "nome": "Políticas Públicas",
+      "topicos": [
+        "Ciclo de políticas públicas: formulação, implementação e avaliação",
+        "Federalismo e descentralização de políticas",
+        "Participação social e controle social",
+        "Tipos de políticas: distributivas, redistributivas, regulatórias"
+      ]
+    },
+    {
+      "id": "eixo-3",
+      "nome": "Administração Financeira e Orçamentária",
+      "topicos": [
+        "Orçamento público: PPA, LDO, LOA",
+        "Receita e despesa pública",
+        "Lei de Responsabilidade Fiscal (LRF)",
+        "Contabilidade pública e SIAFI"
+      ]
+    },
+    {
+      "id": "eixo-4",
+      "nome": "Governança, Integridade e Inovação",
+      "topicos": [
+        "Governança e accountability",
+        "Gestão de riscos e controles internos",
+        "Inovação e transformação digital no setor público",
+        "Ética e integridade na administração pública"
+      ]
+    },
+    {
+      "id": "eixo-5",
+      "nome": "Transparência, Dados, Comunicação e Atendimento",
+      "topicos": [
+        "Transparência pública: Lei de Acesso à Informação (LAI), dados abertos",
+        "Lei Geral de Proteção de Dados Pessoais (LGPD): fundamentos, princípios e responsabilidades",
+        "Comunicação em mídias digitais e comunicação de políticas públicas",
+        "Qualidade de serviços públicos, acessibilidade e uso de linguagem simples",
+        "Noções de Estatística: Amostragem e Inferência"
+      ]
+    }
+  ]

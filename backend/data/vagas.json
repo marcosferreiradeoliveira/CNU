@@ -1,12 +1,50 @@
 [
     {
-        "id": "bloco-8-nivel-intermediario",
-        "titulo": "Bloco 8 - Nível Intermediário",
-        "disciplinas": ["Língua Portuguesa", "Noções de Direito", "Matemática", "Realidade Brasileira"]
+      "id": "vaga-app-mgi",
+      "titulo": "Analista de Políticas Públicas - MGI",
+      "bloco_id": "bloco-5",
+      "pesos": {
+        "eixo-1": 2,
+        "eixo-2": 4,
+        "eixo-3": 3,
+        "eixo-4": 1,
+        "eixo-5": 2
+      }
     },
     {
-        "id": "bloco-7-gestao-governamental",
-        "titulo": "Bloco 7 - Gestão Governamental e Administração Pública",
-        "disciplinas": ["Políticas Públicas", "Administração Pública", "Finanças Públicas"]
+      "id": "vaga-ati-mgi",
+      "titulo": "Analista em Tecnologia da Informação - MGI",
+      "bloco_id": "bloco-5",
+      "pesos": {
+        "eixo-1": 1,
+        "eixo-2": 1,
+        "eixo-3": 1,
+        "eixo-4": 4,
+        "eixo-5": 5
+      }
+    },
+    {
+      "id": "vaga-eppgg-mgi",
+      "titulo": "Especialista em Políticas Públicas e Gestão Governamental - MGI",
+      "bloco_id": "bloco-5",
+      "pesos": {
+        "eixo-1": 4,
+        "eixo-2": 5,
+        "eixo-3": 2,
+        "eixo-4": 3,
+        "eixo-5": 1
+      }
+    },
+    {
+      "id": "vaga-adm-mec",
+      "titulo": "Administrador - MEC",
+      "bloco_id": "bloco-5",
+      "pesos": {
+        "eixo-1": 5,
+        "eixo-2": 2,
+        "eixo-3": 4,
+        "eixo-4": 2,
+        "eixo-5": 1
+      }
     }
-]
+  ]

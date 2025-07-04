@@ -1,0 +1,13 @@
+[
+    {
+      "id": "bloco-5",
+      "nome": "Bloco 5 - Administração e Funções Transversais",
+      "eixos_tematicos_ids": [
+        "eixo-1",
+        "eixo-2",
+        "eixo-3",
+        "eixo-4",
+        "eixo-5"
+      ]
+    }
+  ]
