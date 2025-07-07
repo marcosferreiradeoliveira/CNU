@@ -5,6 +5,7 @@ import json
 from openai import OpenAI
 from pathlib import Path
 from typing import Optional
+import sys
 
 # Carrega as variáveis de ambiente (sua chave da API) do arquivo .env
 from dotenv import load_dotenv
@@ -46,9 +47,10 @@ def gerar_questoes_ia(disciplina: str, perfil_banca: dict, numero_de_questoes: i
 
     prompt_completo = "\n".join(prompt_lines)
 
-    print("[LOG][IA] Prompt enviado para geração de questões:")
-    print(prompt_completo)
+    print(f"[LOG][IA] Chamando OpenAI para disciplina: {disciplina}", file=sys.stderr)
+    print("[LOG][IA] Prompt enviado:", prompt_completo, file=sys.stderr)
     try:
+        print("[LOG][IA] Antes do client.chat.completions.create", file=sys.stderr)
         response = client.chat.completions.create(
             model="gpt-4o",  # Modelo recomendado pela sua capacidade e velocidade
             messages=[
@@ -58,19 +60,18 @@ def gerar_questoes_ia(disciplina: str, perfil_banca: dict, numero_de_questoes: i
             response_format={"type": "json_object"}, # Força a resposta a ser um JSON válido
             temperature=0.8, # Aumenta a criatividade para questões mais originais
         )
-        print("[LOG][IA] Resposta recebida da OpenAI:")
-        print(response)
+        print("[LOG][IA] Depois do client.chat.completions.create", file=sys.stderr)
+        print("[LOG][IA] Resposta recebida da OpenAI:", response, file=sys.stderr)
         content = response.choices[0].message.content
         if not content:
-            print("[LOG][IA] Conteúdo da resposta está vazio ou None.")
+            print("[LOG][IA] Conteúdo da resposta está vazio ou None.", file=sys.stderr)
             return []
-        print("[LOG][IA] Conteúdo da resposta:")
-        print(content)
+        print("[LOG][IA] Conteúdo da resposta:", content, file=sys.stderr)
         resultado_json = json.loads(content)
         return resultado_json.get("questoes", []) # Retorna a lista de questões ou uma lista vazia se a chave não existir
 
     except Exception as e:
-        print(f"Erro ao gerar questões com a API da OpenAI: {e}")
+        print(f"[LOG][IA] Erro ao chamar OpenAI: {e}", file=sys.stderr)
         return []
 
 def gerar_script_explicativo(erros: list) -> str:

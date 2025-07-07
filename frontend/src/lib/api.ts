@@ -1,5 +1,5 @@
 // src/lib/api.ts
-const API_BASE_URL = 'http://127.0.0.1:5000/api';
+const API_BASE_URL = "https://cnu-backend-300664086590.us-central1.run.app/api";
 
 export interface PerfilSimulado {
     banca: string;
