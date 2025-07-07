@@ -19,7 +19,7 @@
         "destination": "/api/index.py"
       },
       {
-        "source": "/(.*)",
+        "source": "/((?!api/|assets/).*)",
         "destination": "/index.html"
       }
     ]
